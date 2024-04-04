@@ -88,9 +88,12 @@ class PyramidWall {
       for (let j = 0; j < rows; j++) {
         let x = i * baseWidth + baseWidth / 2;
         let y = j * baseHeight + baseHeight / 2;
-        this.pyramidPainters.push(
-          new PyramidPainter(createVector(x, y), baseWidth, 6)
-        );
+        if(i==3||j==4||i==0){
+
+          this.pyramidPainters.push(
+            new PyramidPainter(createVector(x, y), baseWidth, 6)
+          );
+        }
       }
     }
   }
